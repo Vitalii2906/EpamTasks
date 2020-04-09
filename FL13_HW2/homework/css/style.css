@@ -1,5 +1,137 @@
-/*
+@keyframes banner {
+   from {transform: rotate(45deg);}
+   to {transform: rotate(0deg);}
+}
 
-write your code here
 
-*/
+
+section{
+   box-shadow: 0 4px 8px 0 rgba(61, 55, 61, 0.7), 0 6px 20px 0 rgba(61, 55, 61, 0.7);
+}
+section::before{
+   content: ' ';
+   position: absolute;
+   width: 0;
+	height: 0;
+	border-top: 40px solid lightskyblue; 
+	border-right: 40px solid transparent;
+}
+.tm-sidebar{
+   box-shadow: 0 4px 8px 0 rgba(61, 55, 61, 0.7), 0 6px 20px 0 rgba(61, 55, 61, 0.7);
+}
+.tm-nav-item a:hover{
+   background-color: lightskyblue ;
+   color: #fff;
+}
+.tm-content-header{
+   box-shadow: 0 4px 8px 0 rgba(61, 55, 61, 0.7), 0 6px 20px 0 rgba(61, 55, 61, 0.7);
+}
+.tm-banner{
+   background-image: linear-gradient(burlywood , lightskyblue );
+   background-color: #76cdd7;
+   text-shadow: 0 3px  lightskyblue, 0 10px 2px lightskyblue ;
+   letter-spacing: 3px;
+   word-spacing: 10px;
+}
+.tm-banner-inner{
+   background-color: #fff;
+}
+.tm-banner-text{
+   animation-name: banner;
+   animation-duration: 3s;
+}
+.flex-2-col{
+   display: flex;
+   flex-direction: row-reverse;
+   
+}
+.tm-team-description-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-height: 900px;
+   
+}
+.tm-team-description-container p{
+   font-style: italic;
+   text-indent: 1.5em;
+}
+.box-bg h2:hover{
+   background-color: lightskyblue ;
+   color: #fff;
+}
+.heading h2{
+   text-align: center;
+   color: lightskyblue;
+}
+.heading li{
+   list-style-type: decimal-leading-zero;
+}
+.heading a:hover{
+   color: red;
+}
+.heading a:hover:before{
+   content: '>';
+}
+.heading li:nth-child(1):after,
+.heading li:nth-child(3):after{
+   content: 'New';
+   color: red;
+   font-variant: small-caps;
+   font-size: small;
+   font-weight: bold; 
+   vertical-align: super;
+}
+.blocks h2{
+   text-align: center;
+}
+.blocks p{
+   font-style: italic;
+   text-indent: 1.5em;
+   line-height: 25px;
+}
+.box-work{
+   padding: 10px;
+}
+.box-work:nth-child(2),
+.box-work:nth-child(4),
+.box-work:nth-child(6){
+   background-color: lightskyblue;
+   color: white;
+}
+.box-work p::first-letter{
+   font-weight: 900;
+}
+.carousel-item p{
+   font-style: italic;
+}
+#contact {
+   text-align: right;
+}
+.contact-form input{
+   border: none;
+   border-bottom: 1px solid lightskyblue;
+}
+.contact-form input:focus{
+   background-color: lightskyblue;
+}
+#contact_subject{
+   background-image: url(..//img/email-icon.png) ;
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: 3%;
+}
+.btn{
+   border: 2px solid lightskyblue;
+   background-color: white;
+   border-radius: 0;
+   color: lightskyblue;
+
+}
+.btn:hover{
+   background-color: lightskyblue;
+   color: white;
+   border: none;
+   border: 2px solid lightskyblue;
+}
