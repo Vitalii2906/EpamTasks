@@ -1,3 +1,168 @@
+mark {
+  background-color: #14a0c7;
+  color: inherit;
+  line-height: 10px; }
 
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #21232e; }
+
+header {
+  background-image: url(../img/m-h-day.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 40% 0;
+  color: #2c2f3c; }
+
+button {
+  background-color: #699900;
+  border: none;
+  width: 180px;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer; }
+
+a {
+  color: white;
+  font-size: 24px; }
+
+p {
+  margin: 0; }
+
+.landing-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: baseline; }
+  .landing-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; }
+  .landing-logo p {
+    padding-top: 5px;
+    line-height: 20px;
+    text-align: center; }
+  .landing-logo span {
+    font-size: small; }
+
+.header-wrap {
+  padding-top: 30px;
+  max-width: 1535px;
+  height: 100vh;
+  margin: 0 auto; }
+  .header-wrap .header_heading {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 100px 0 80px 0;
+    line-height: normal; }
+  .header-wrap .header_text {
+    margin-bottom: 80px;
+    line-height: 25px;
+    font-size: 20px; }
+  .header-wrap .login {
+    margin-left: 190px; }
+
+.section {
+  position: relative;
+  margin: 0 auto; }
+  .section .section_text {
+    text-align: center;
+    font-size: 40px;
+    color: #2c2f3c;
+    margin: 45px 0; }
+  .section .section_card_wrap {
+    margin-bottom: 175px; }
+  .section .section_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1130px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: white;
+    padding: 20px;
+    background-color: #21232e;
+    border-radius: 5px; }
+    .section .section_card .section_card_img {
+      border-radius: 5px;
+      width: 379px;
+      height: 300px; }
+    .section .section_card .section_card_right_container {
+      text-align: center;
+      padding: 20px;
+      margin-right: 110px; }
+      .section .section_card .section_card_right_container .section_card_heading {
+        font-size: 30px;
+        margin: 20px 0; }
+      .section .section_card .section_card_right_container .section_card_text {
+        text-align: justify;
+        width: 500px;
+        color: #c0b9c4;
+        margin-bottom: 30px; }
+      .section .section_card .section_card_right_container a {
+        color: #c0b9c4; }
+  .section .section_card:nth-child(2) img {
+    width: 359px; }
+  .section .section_card:nth-child(3) img {
+    width: 400px; }
+  .section .section_banner {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 1200px;
+    left: 50%;
+    margin-left: -645px;
+    margin-top: -5em;
+    padding: 45px;
+    border-radius: 5px;
+    background: -webkit-gradient(linear, left top, right top, from(#649413), to(#2e5cd3));
+    background: linear-gradient(to right, #649413, #2e5cd3); }
+    .section .section_banner .section_banner_heading {
+      font-size: 30px;
+      font-weight: bold; }
+    .section .section_banner .section_banner_text {
+      color: #c0aa8b;
+      margin-top: 20px; }
+    .section .section_banner button {
+      margin-top: 10px; }
+
+footer {
+  width: 100%;
+  background-color: #21232e;
+  color: #c0aa8b;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  z-index: 0; }
+  footer .footer-wrap {
+    max-width: 1535px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto; }
+    footer .footer-wrap .footer_logo {
+      width: 150px; }
+    footer .footer-wrap p {
+      width: 360px;
+      text-align: justify; }
+    footer .footer-wrap span {
+      width: 200px; }
 
 /*# sourceMappingURL=style1.css.map */
