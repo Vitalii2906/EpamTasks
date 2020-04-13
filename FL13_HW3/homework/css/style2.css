@@ -1,184 +1,68 @@
-body {
-  background-color: #21232e;
-  margin: 0;
-  font-family: "Fresca", sans-serif;
-  color: #3b3f50; }
+/*
+Error: Invalid CSS after "...("Hello world")": expected "{", was "}"
+        on line 213 of F:/web2/FL-13/FL13_HW3/homework/scss/_main.scss
+        from line 3 of F:\web2\FL-13\FL13_HW3\homework\scss\style2.scss
 
-header {
-  background-image: url(../img/m-h-night.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0 0 40% 0;
-  color: #ffffff; }
+208: .start{
+209:    @extend .adventure;
+210: }
+211: .header_heading{
+212:    str-length("Hello world")
+213: }
 
-button {
-  background-color: #e3ac00;
-  border: none;
-  width: 180px;
-  height: 60px;
-  color: #ffffff;
-  font-size: 20px;
-  cursor: pointer; }
-
-.header_heading,
-.section_text,
-.section_card_heading {
-  font-family: 'Source Sans Pro', sans-serif; }
-
-a {
-  color: #ffffff;
-  font-size: 24px; }
-
-p {
-  margin: 0; }
-
-.landing-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 50px;
-  font-size: 30px;
-  font-weight: 600;
-  text-align: center;
-  vertical-align: baseline; }
-  .landing-logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px; }
-  .landing-logo p {
-    padding-top: 5px;
-    line-height: 20px;
-    text-align: center; }
-  .landing-logo span {
-    font-size: small; }
-
-.header-wrap {
-  padding-top: 30px;
-  max-width: 1200px;
-  margin: 0 auto; }
-  .header-wrap .header_heading {
-    font-size: 60px;
-    font-weight: bold;
-    margin: 50px 0 40px 0; }
-  .header-wrap .header_text {
-    margin-bottom: 80px;
-    line-height: 25px;
-    font-size: 20px; }
-  .header-wrap .login {
-    margin-left: 120px; }
-  .header-wrap div:last-child {
-    padding-bottom: 120px; }
-
-.section {
-  position: relative;
-  margin: 0 auto; }
-  .section .section_text {
-    text-align: center;
-    font-size: 40px;
-    color: #ffffff;
-    margin: 45px 0; }
-  .section .section_card_wrap {
-    margin-bottom: 175px; }
-  .section .section_card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-width: 820px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    color: #ffffff;
-    padding: 20px;
-    background-color: #3b3f50;
-    border-radius: 5px; }
-    .section .section_card .section_card_img {
-      border-radius: 5px; }
-    .section .section_card .section_card_right_container {
-      text-align: center;
-      padding: 20px 100px; }
-      .section .section_card .section_card_right_container .section_card_heading {
-        font-size: 30px;
-        margin-bottom: 20px; }
-      .section .section_card .section_card_right_container .section_card_text {
-        text-align: justify;
-        color: #c0b9c4;
-        margin-bottom: 10px; }
-      .section .section_card .section_card_right_container a {
-        color: #c0b9c4; }
-  .section .section_card:nth-child(1) img {
-    width: 110%; }
-  .section .section_card:nth-child(3) img {
-    width: 120%; }
-
-.section_banner {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 860px;
-  left: 50%;
-  margin-left: -455px;
-  margin-top: -4em;
-  padding: 25px;
-  border-radius: 5px;
-  background: -webkit-gradient(linear, left top, right top, from(#dea405), to(#97334e));
-  background: linear-gradient(to right, #dea405, #97334e); }
-  .section_banner .section_banner_heading {
-    font-size: 30px;
-    font-weight: bold; }
-  .section_banner .section_banner_text {
-    color: #c0b9c4;
-    margin-top: 20px; }
-  .section_banner button {
-    margin-top: 10px; }
-
-footer {
-  width: 100%;
-  background-color: #3b3f50;
-  color: #c0b9c4;
-  padding-top: 140px;
-  padding-bottom: 50px;
-  z-index: 0; }
-  footer .footer-wrap {
-    max-width: 1200px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0 auto; }
-    footer .footer-wrap .footer_logo {
-      width: 150px; }
-      footer .footer-wrap .footer_logo p {
-        text-align: center; }
-    footer .footer-wrap p {
-      width: 360px;
-      text-align: justify; }
-    footer .footer-wrap .footer-cran {
-      width: 200px; }
-
-.awesome {
-  display: inline-block;
-  background-color: #ff4e33;
-  color: inherit;
-  line-height: 30px;
-  padding-bottom: 20px; }
-
-.adventure, .start {
-  display: inline-block;
-  background-color: #ff4e33;
-  color: inherit;
-  line-height: 30px;
-  padding-top: 10px; }
-
-/*# sourceMappingURL=style2.css.map */
+Backtrace:
+F:/web2/FL-13/FL13_HW3/homework/scss/_main.scss:213
+F:\web2\FL-13\FL13_HW3\homework\scss\style2.scss:3
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:321:in `to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...(\"Hello world\")\": expected \"{\", was \"}\"\A         on line 213 of F:/web2/FL-13/FL13_HW3/homework/scss/_main.scss\A         from line 3 of F:\web2\FL-13\FL13_HW3\homework\scss\style2.scss\A \A 208: .start{\A 209:    @extend .adventure;\A 210: }\A 211: .header_heading{\A 212:    str-length(\"Hello world\")\A 213: }"; }
