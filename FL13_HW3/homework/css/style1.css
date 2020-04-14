@@ -1,68 +1,211 @@
-/*
-Error: Invalid CSS after "...("Hello world")": expected "{", was "}"
-        on line 213 of F:/web2/FL-13/FL13_HW3/homework/scss/_main.scss
-        from line 3 of F:\web2\FL-13\FL13_HW3\homework\scss\style1.scss
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #21232e;
+  font-family: "Hind", sans-serif; }
 
-208: .start{
-209:    @extend .adventure;
-210: }
-211: .header_heading{
-212:    str-length("Hello world")
-213: }
+header {
+  background-image: url(../img/m-h-day.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 40% 0;
+  color: #2c2f3c; }
 
-Backtrace:
-F:/web2/FL-13/FL13_HW3/homework/scss/_main.scss:213
-F:\web2\FL-13\FL13_HW3\homework\scss\style1.scss:3
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:321:in `to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...(\"Hello world\")\": expected \"{\", was \"}\"\A         on line 213 of F:/web2/FL-13/FL13_HW3/homework/scss/_main.scss\A         from line 3 of F:\web2\FL-13\FL13_HW3\homework\scss\style1.scss\A \A 208: .start{\A 209:    @extend .adventure;\A 210: }\A 211: .header_heading{\A 212:    str-length(\"Hello world\")\A 213: }"; }
+button {
+  background-color: #699900;
+  border: none;
+  width: 180px;
+  height: 60px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+a {
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+p {
+  margin: 0; }
+
+.landing-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: baseline; }
+  .landing-logo img {
+    width: 50px;
+    height: 50px; }
+  .landing-logo p {
+    padding-top: 5px;
+    line-height: 20px;
+    text-align: center; }
+  .landing-logo span {
+    font-size: small;
+    display: inline-block; }
+
+.header-wrap {
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .header-wrap .header_heading {
+    position: relative;
+    line-height: 80px;
+    font-size: 80px;
+    font-weight: 900;
+    margin: 50px 0 50px 0;
+    max-width: 650px;
+    z-index: 1;
+    font-family: 'Source Sans Pro', sans-serif; }
+    .header-wrap .header_heading:before {
+      content: " ";
+      width: 335px;
+      position: absolute;
+      bottom: 0;
+      background-color: #0bacc2;
+      height: 55px;
+      z-index: -1; }
+  .header-wrap .header_text {
+    white-space: pre-line;
+    text-align: left;
+    margin-bottom: 50px;
+    font-size: 20px; }
+  .header-wrap .login {
+    margin-left: 120px; }
+  .header-wrap div:last-child {
+    padding-bottom: 165px; }
+
+.section {
+  position: relative;
+  margin: 0 auto; }
+  .section .section_text {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    vertical-align: bottom;
+    color: #2c2f3c;
+    margin: 45px 0;
+    line-height: 25px;
+    font-family: 'Hind', sans-serif; }
+    .section .section_text::before {
+      content: ' ';
+      width: 185px;
+      position: absolute;
+      left: 774px;
+      bottom: 0;
+      background-color: #0bacc2;
+      height: 45px;
+      z-index: -1; }
+  .section .section_card_wrap {
+    margin-bottom: 175px; }
+  .section .section_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 820px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: #ffffff;
+    padding: 20px;
+    background-color: #21232e;
+    border-radius: 5px; }
+    .section .section_card .section_card_img {
+      border-radius: 5px;
+      height: 200px; }
+    .section .section_card .section_card_right_container {
+      text-align: center;
+      padding: 10px 70px; }
+      .section .section_card .section_card_right_container .section_card_heading {
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-family: 'Source Sans Pro', sans-serif; }
+      .section .section_card .section_card_right_container .section_card_text {
+        text-align: justify;
+        color: #c0b9c4;
+        margin-bottom: 10px; }
+      .section .section_card .section_card_right_container a {
+        color: #c0b9c4; }
+  .section .section_card:nth-child(1) img {
+    width: 101%; }
+  .section .section_card:nth-child(3) img {
+    width: 102%; }
+
+.section_banner {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 860px;
+  left: 50%;
+  margin-left: -455px;
+  margin-top: -4em;
+  padding: 15px 0 35px 0;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#649413), to(#2e5cd3));
+  background: linear-gradient(to right, #649413, #2e5cd3);
+  z-index: 10; }
+  .section_banner .section_banner_heading {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 60px;
+    font-family: 'Hind', sans-serif;
+    color: #ffffff; }
+    .section_banner .section_banner_heading:before {
+      content: " ";
+      background-color: #0bacc2;
+      position: absolute;
+      width: 63px;
+      height: 45px;
+      z-index: -1;
+      left: 124px; }
+  .section_banner .section_banner_text {
+    color: #c0b9c4; }
+  .section_banner button {
+    margin-top: 20px; }
+
+footer {
+  width: 100%;
+  background-color: #21232e;
+  color: #c0b9c4;
+  padding-top: 140px;
+  padding-bottom: 50px; }
+  footer .footer-wrap {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto; }
+    footer .footer-wrap .footer_logo {
+      width: 140px; }
+      footer .footer-wrap .footer_logo img {
+        margin: 0; }
+      footer .footer-wrap .footer_logo p {
+        text-align: center; }
+        footer .footer-wrap .footer_logo p span {
+          display: inline-block; }
+    footer .footer-wrap p {
+      width: 360px;
+      text-align: left; }
+    footer .footer-wrap .footer-cran {
+      width: 200px; }
