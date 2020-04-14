@@ -33,6 +33,7 @@ header{
    background-size: cover;
    border-radius: 0 0 30% 0;
    color: $headerColor;
+   padding-top: 30px;
 }
 button{
    background-color: $bg-button;
@@ -53,12 +54,9 @@ p{
    font-weight: 600;
    text-align: center;
    vertical-align: baseline;
-   img{
-      width: 50px;
-      height: 50px;
-   }
    p{
-      padding-top: 5px;
+      margin-left: 10px;
+      padding-top: 8px;
       line-height: 20px;
       text-align: center;
    }
@@ -68,7 +66,6 @@ p{
    }
 }
 .header-wrap{
-   padding-top: 30px;
    max-width: 1200px;
    margin: 0 auto; 
    .header_heading{
@@ -214,11 +211,10 @@ footer{
    padding-top: 140px;
    padding-bottom: 50px;
    .footer-wrap{
-      max-width: 1200px;
+      @extend .header-wrap;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0 auto;
       .footer_logo{
          width: 140px;
          img{

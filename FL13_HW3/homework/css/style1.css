@@ -11,7 +11,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 0 30% 0;
-  color: #2c2f3c; }
+  color: #2c2f3c;
+  padding-top: 30px; }
 
 button {
   background-color: #699900;
@@ -41,22 +42,19 @@ p {
   font-weight: 600;
   text-align: center;
   vertical-align: baseline; }
-  .landing-logo img {
-    width: 50px;
-    height: 50px; }
   .landing-logo p {
-    padding-top: 5px;
+    margin-left: 10px;
+    padding-top: 8px;
     line-height: 20px;
     text-align: center; }
   .landing-logo span {
     font-size: small;
     display: inline-block; }
 
-.header-wrap {
-  padding-top: 30px;
+.header-wrap, footer .footer-wrap {
   max-width: 1200px;
   margin: 0 auto; }
-  .header-wrap .header_heading {
+  .header-wrap .header_heading, footer .footer-wrap .header_heading {
     position: relative;
     line-height: 80px;
     font-size: 80px;
@@ -65,7 +63,7 @@ p {
     max-width: 650px;
     z-index: 1;
     font-family: 'Source Sans Pro', sans-serif; }
-    .header-wrap .header_heading:before {
+    .header-wrap .header_heading:before, footer .footer-wrap .header_heading:before {
       content: " ";
       width: 335px;
       position: absolute;
@@ -73,14 +71,14 @@ p {
       background-color: #0bacc2;
       height: 55px;
       z-index: -1; }
-  .header-wrap .header_text {
+  .header-wrap .header_text, footer .footer-wrap .header_text {
     white-space: pre-line;
     text-align: left;
     margin-bottom: 50px;
     font-size: 20px; }
-  .header-wrap .login {
+  .header-wrap .login, footer .footer-wrap .login {
     margin-left: 120px; }
-  .header-wrap div:last-child {
+  .header-wrap div:last-child, footer .footer-wrap div:last-child {
     padding-bottom: 165px; }
 
 .section {
@@ -185,7 +183,6 @@ footer {
   padding-top: 140px;
   padding-bottom: 50px; }
   footer .footer-wrap {
-    max-width: 1200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -194,8 +191,7 @@ footer {
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    margin: 0 auto; }
+            align-items: center; }
     footer .footer-wrap .footer_logo {
       width: 140px; }
       footer .footer-wrap .footer_logo img {
