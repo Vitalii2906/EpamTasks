@@ -38,12 +38,14 @@ p {
   font-size: 30px;
   font-weight: 600;
   text-align: center;
-  vertical-align: baseline; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .landing-logo img {
     float: left;
     margin-right: 15px; }
   .landing-logo p {
-    padding-top: 10px;
+    padding-top: 5px;
     margin-left: 10px;
     line-height: 20px;
     text-align: center; }
