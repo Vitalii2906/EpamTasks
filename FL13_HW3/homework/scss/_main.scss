@@ -31,7 +31,7 @@ header{
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   border-radius: 0 0 30% 0;
+   border-radius: 0 0 50% 0;
    color: $headerColor;
    padding-top: 30px;
 }
@@ -47,16 +47,19 @@ p{
    margin: 0;
 }
 .landing-logo{
-   display: flex;
-   width: 140px;
+   display: inline-block;
    height: 50px;
    font-size: 30px;
    font-weight: 600;
    text-align: center;
    vertical-align: baseline;
+   img{
+      float: left;
+      margin-right: 15px;
+   }
    p{
+      padding-top: 5px;
       margin-left: 10px;
-      padding-top: 8px;
       line-height: 20px;
       text-align: center;
    }
@@ -90,7 +93,7 @@ p{
    .header_text{
       white-space: pre-line;
       text-align: left;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       font-size: 20px;
    }
    .login{
@@ -185,7 +188,7 @@ p{
          font-weight: bold;
          line-height: 60px;
          font-family: 'Hind', sans-serif;
-         color: map-get($fontColor, "light");
+         color: $colorBannerText;
          &:before{
             content: " ";
             background-color: $bg-colorBefore;
@@ -216,18 +219,14 @@ footer{
       justify-content: space-between;
       align-items: center;
       .footer_logo{
-         width: 140px;
          img{
-            margin: 0;
+            float: left;
          }
          p{
             text-align: center;
-            span{
-               display: inline-block;
-            }
          }
       }
-      p{
+      .footer_text{
          width: 360px;
          text-align: left;
       }
