@@ -388,7 +388,7 @@ footer p {
   .block4,
   .block5,
   .block8{
-    height: 300px;
+    height: 400px;
   }
   .news1{
     margin-top: 20px;
@@ -397,6 +397,7 @@ footer p {
     margin-bottom: 40px;
   }
   footer{
+    padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
