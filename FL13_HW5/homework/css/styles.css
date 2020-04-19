@@ -1,15 +1,4 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
 
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--medium: #162b4d;
-  --text--color: #484848;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-}
 
 body {
   display: grid;
