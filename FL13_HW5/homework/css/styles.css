@@ -12,9 +12,10 @@
 }
 
 body {
+  margin: 0;
   font-family: roboto;
+  background-color: #0b192f;
 }
-
 .post-1 {
 	background: #F3D250;
 }
@@ -27,5 +28,66 @@ body {
 .post-4 {
 	background: #DAAD86;
 }
+h2{
+  margin: 0;
+}
 
 /* Your styles go here */
+header{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #162b4d;
+  display: flex;
+  justify-content: space-between;
+  color:#fff; 
+}
+header .logo{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo span{
+  color: red;
+}
+header li{
+  margin-right: 40px;
+  display: inline;
+}
+main{
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+    "section section section post1"
+    "section section section post2"
+  ;
+}
+section{
+  grid-area: section;
+  display: flex;
+  flex-wrap: wrap;
+}
+img{
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.block{
+  max-width: 500px;
+  max-height: 500px;
+}
+.block:nth-child(4),
+.block:nth-child(8){
+  float: right;
+}
+article{
+  width: 20%;
+  float: right;
+}
+.post1{
+  grid-area: post1;
+}
+.post2{
+  grid-area: post2;
+}
