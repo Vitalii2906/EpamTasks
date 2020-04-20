@@ -215,7 +215,7 @@ main{
 .post-2,
 .post-3,
 .post-4{
-  padding: 20px;
+  padding: 20px 20px 40px 40px;
   color: #484848;
 }
 .post-1 .content,
@@ -243,12 +243,15 @@ main{
 
 .date p{
   margin: 0;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 200;
   
 }
+.date span{
+  font-size: 25px;
+}
 .content{
-  width: 87%;
+  width: 80%;
 }
 .content p {
   line-height: 30px;
