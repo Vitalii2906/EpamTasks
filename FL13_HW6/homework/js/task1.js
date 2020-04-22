@@ -1,6 +1,6 @@
 // Your code goes here
 let check = Number(window.prompt('Check number'));
-let tip = Number(window.prompt('Tip'));
+let tip = Number(window.prompt('Tip %'));
 
 
 if((typeof check === 'number' && typeof tip === 'number')&&((check >= 0) && (tip >= 0 && tip <=100))){
