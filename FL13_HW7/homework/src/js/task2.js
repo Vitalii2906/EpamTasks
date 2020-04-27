@@ -65,7 +65,6 @@ function superGames(){
       attemtsNumb = attemtsNumb + Number(five)
       checkNumber = checkNumber * Number(two)
       attemts = Number(three)
-      console.log(attemts)
       i = 0
       maxWin = maxWin * Number(two)
       attemptMonay = maxWin
