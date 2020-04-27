@@ -1,22 +1,20 @@
 let casino = window.confirm('Do you want to play a game?')
-let two = 2
-let three = 3
-let five = 5
+let two = 2, three = 3, five = 5, oneHundred = 100, minusOne = -1, four = 4
 let pickNumber
 let random
 let maxWin = 100
-let i = 0
-let win = 0
+let i = 0, win = 0
 let attempt
 let attemts = 3
 let attemptMonay = 100
 let superGame = false
+let game = false
 let checkNumber = 6
 let attemtsNumb = Number(five)
 
-
-if (casino === true) {
-   while (i <= Number(three)) {
+if (casino !== false) {
+   for (i = 0; i <= Number(three); i++) {
+      console.log('i ' + i)
       pickNumber = prompt(
          `
          Choose a roullet pocket number from 0 to ${attemtsNumb}
@@ -27,14 +25,10 @@ if (casino === true) {
       )
 
       random = Math.floor(Math.random() * checkNumber)
-      if (i === Number(two)) {
-         alert(`Thank you for your participation. Your prize is: ${win} $`)
-         break
-      } 
+
       if(Number(pickNumber) === random){
          win = win + attemptMonay
-         alert(`Congratulation, you won!   Your prize is: ${win} $.`)
-         superGame = confirm('Do you want to continue?')
+         superGame = confirm(`Congratulation, you won!   Your prize is: ${win} $. 'Do you want to continue?'`)
          if(superGame === true){
             superGame = true
             superGames()
@@ -46,14 +40,23 @@ if (casino === true) {
             break
          }
       }else if(Number(pickNumber) !== random && pickNumber !== null){
+         console.log(attemts)
          attemptMonay = attemptMonay / Number(two)
          attemts--
-         i++
       }else{
          alert('You did not become a billionaire, but can.')
          break
       }
    }
+
+   if (i === Number(two)) {
+      alert(`Thank you for your participation. Your prize is: ${win} $`)
+      game = confirm(`Do you want to play again?`)
+      if(game === true){
+         game = true
+         games()
+      }
+   } 
 } else {
    alert('You did not become a billionaire, but can.')
 }
@@ -61,17 +64,29 @@ if (casino === true) {
 function superGames(){
    switch(superGame) {
       case true:
-      attemtsNumb = attemtsNumb + Number(five)
-      checkNumber = checkNumber * Number(two)
-      attemts = Number(three)
-      i = 0
-      maxWin = maxWin * Number(two)
-      attemptMonay = maxWin
-      break  
+         attemtsNumb = attemtsNumb + Number(five)
+         checkNumber = checkNumber * Number(two)
+         attemts = Number(three)
+         i = Number(minusOne)
+         maxWin = maxWin * Number(two)
+         attemptMonay = maxWin
+         break  
       default: 
-      alert(`Thank you for your participation. Your prize is: ${win} $`)
-      break
+         alert(`Thank you for your participation. Your prize is: ${win} $`)
+         break
    }
 }
 
-
+function games(){
+   switch(game) {
+      case true:
+         maxWin = Number(oneHundred)
+         i = 0 
+         win = 0
+         attemts = Number(three)
+         attemptMonay = Number(oneHundred)
+         break
+      default:
+         break
+   }
+}
