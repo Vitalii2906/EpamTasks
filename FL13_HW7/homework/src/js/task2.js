@@ -12,45 +12,43 @@ let attemts = 3
 let attemptMonay = 100
 let superGame = false
 let checkNumber = 6
-let attemtsNumb = 5
+let attemtsNumb = Number(five)
 
 
 if (casino === true) {
    while (i <= Number(three)) {
-      pickNumber = Number(prompt(
+      pickNumber = prompt(
          `
          Choose a roullet pocket number from 0 to ${attemtsNumb}
          Attemts left: ${attemts}
          Total prize: ${win}$
          Posible prize on current attempt: ${attemptMonay}$
          `
-      ))
+      )
 
       random = Math.floor(Math.random() * checkNumber)
-      if(pickNumber !== random && pickNumber >= 0){
-   
-         attemptMonay = attemptMonay / Number(two)
-         attemts--
-         i++
-         
-         if (i === Number(three)) {
-            alert(`Thank you for your participation. Your prize is: ${win} $`)
-            break
-         }
-      }else if(pickNumber === random){
+      if (i === Number(two)) {
+         alert(`Thank you for your participation. Your prize is: ${win} $`)
+         break
+      } 
+      if(Number(pickNumber) === random){
          win = win + attemptMonay
          alert(`Congratulation, you won!   Your prize is: ${win} $.`)
          superGame = confirm('Do you want to continue?')
          if(superGame === true){
             superGame = true
             superGames()
-         }else if(i === Number(three) && superGame === true){
+         }else if(superGame === false){
             alert(`Thank you for your participation. Your prize is: ${win} $`)
             break
-         }else{
+         }else if(superGame === true && pickNumber === null){
             alert(`Thank you for your participation. Your prize is: ${win} $`)
             break
          }
+      }else if(Number(pickNumber) !== random && pickNumber !== null){
+         attemptMonay = attemptMonay / Number(two)
+         attemts--
+         i++
       }else{
          alert('You did not become a billionaire, but can.')
          break
@@ -69,7 +67,7 @@ function superGames(){
       i = 0
       maxWin = maxWin * Number(two)
       attemptMonay = maxWin
-      break
+      break  
       default: 
       alert(`Thank you for your participation. Your prize is: ${win} $`)
       break
