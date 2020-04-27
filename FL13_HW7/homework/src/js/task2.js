@@ -15,11 +15,6 @@ let checkNumber = 6
 let attemtsNumb = 5
 
 
-
-
-
-
-
 if (casino === true) {
    while (i <= Number(three)) {
       pickNumber = Number(prompt(
@@ -63,7 +58,6 @@ if (casino === true) {
 } else {
    alert('You did not become a billionaire, but can.')
 }
-
 
 function superGames(){
    switch(superGame) {
