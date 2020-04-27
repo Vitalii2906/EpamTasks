@@ -49,6 +49,7 @@ if (casino === true) {
             break
          }else{
             alert(`Thank you for your participation. Your prize is: ${win} $`)
+            break
          }
       }else{
          alert('You did not become a billionaire, but can.')
