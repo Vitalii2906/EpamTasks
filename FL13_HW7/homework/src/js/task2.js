@@ -31,9 +31,7 @@ if (casino === true) {
          `
       ))
 
-      random = Number(two)
-      //random = Math.floor(Math.random() * checkNumber)
-
+      random = Math.floor(Math.random() * checkNumber)
       if(pickNumber !== random && pickNumber >= 0){
    
          attemptMonay = attemptMonay / Number(two)
@@ -51,6 +49,9 @@ if (casino === true) {
          if(superGame === true){
             superGame = true
             superGames()
+         }else if(i === Number(three) && superGame === true){
+            alert(`Thank you for your participation. Your prize is: ${win} $`)
+            break
          }else{
             alert(`Thank you for your participation. Your prize is: ${win} $`)
          }
@@ -71,9 +72,8 @@ function superGames(){
       checkNumber = checkNumber * Number(two)
       attemts = Number(three)
       console.log(attemts)
-      i = i - Number(three)
+      i = 0
       maxWin = maxWin * Number(two)
-      console.log(maxWin)
       attemptMonay = maxWin
       break
       default: 
