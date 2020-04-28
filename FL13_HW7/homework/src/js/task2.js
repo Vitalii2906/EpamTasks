@@ -13,8 +13,11 @@ let checkNumber = 6
 let attemtsNumb = Number(five)
 
 if (casino !== false) {
-   for (i = 0; i <= Number(three); i++) {
-      console.log('i ' + i)
+   while (i <= Number(two)) {
+      console.log(i)
+
+      random = Math.floor(Math.random() * checkNumber)
+
       pickNumber = prompt(
          `
          Choose a roullet pocket number from 0 to ${attemtsNumb}
@@ -24,9 +27,11 @@ if (casino !== false) {
          `
       )
 
-      random = Math.floor(Math.random() * checkNumber)
-
-      if(Number(pickNumber) === random){
+      if(Number(pickNumber) !== random && pickNumber !== '' && pickNumber !== null){
+         attemptMonay = attemptMonay / Number(two)
+         attemts--
+         i++
+      }else if(Number(pickNumber) === random){
          win = win + attemptMonay
          superGame = confirm(`Congratulation, you won!   Your prize is: ${win} $. 'Do you want to continue?'`)
          if(superGame === true){
@@ -39,54 +44,43 @@ if (casino !== false) {
             alert(`Thank you for your participation. Your prize is: ${win} $`)
             break
          }
-      }else if(Number(pickNumber) !== random && pickNumber !== null){
-         console.log(attemts)
-         attemptMonay = attemptMonay / Number(two)
-         attemts--
       }else{
          alert('You did not become a billionaire, but can.')
          break
       }
+
+      if (i === Number(three)) {
+         game = Boolean(confirm(
+            `Thank you for your participation. Your prize is: ${win} $. Do you want to play again?`
+         ))
+         if(game === true){
+            maxWin = Number(oneHundred)
+            i = 0 
+            win = 0
+            attemts = Number(three)
+            attemptMonay = Number(oneHundred)
+         }else{
+            alert('You did not become a billionaire, but can.')
+            break
+         }
+      } 
    }
 
-   if (i === Number(two)) {
-      alert(`Thank you for your participation. Your prize is: ${win} $`)
-      game = confirm(`Do you want to play again?`)
-      if(game === true){
-         game = true
-         games()
-      }
-   } 
-} else {
+}else{
    alert('You did not become a billionaire, but can.')
 }
 
 function superGames(){
-   switch(superGame) {
-      case true:
+   if(superGame === true) {
          attemtsNumb = attemtsNumb + Number(five)
          checkNumber = checkNumber * Number(two)
          attemts = Number(three)
-         i = Number(minusOne)
+         i = 0
          maxWin = maxWin * Number(two)
-         attemptMonay = maxWin
-         break  
-      default: 
-         alert(`Thank you for your participation. Your prize is: ${win} $`)
-         break
+         attemptMonay = maxWin 
+   }else{
+      alert(`Thank you for your participation. Your prize is: ${win} $`)
    }
 }
 
-function games(){
-   switch(game) {
-      case true:
-         maxWin = Number(oneHundred)
-         i = 0 
-         win = 0
-         attemts = Number(three)
-         attemptMonay = Number(oneHundred)
-         break
-      default:
-         break
-   }
-}
+
