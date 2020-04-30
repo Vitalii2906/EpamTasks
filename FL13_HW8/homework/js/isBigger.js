@@ -3,5 +3,4 @@ function isBigger(a, b) {
    return c
 }
 
-isBigger(1, 0)
-console.log(isBigger())
+isBigger()
