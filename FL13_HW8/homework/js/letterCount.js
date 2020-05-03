@@ -5,4 +5,4 @@ function letterCount(str, arg){
    
 }
 
-letterCount
+letterCount()

@@ -16,4 +16,4 @@ function countPoints(arr) {
    return sum
 }
 
-countPoints
+countPoints()

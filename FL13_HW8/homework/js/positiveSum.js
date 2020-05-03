@@ -9,4 +9,4 @@ function positiveSum(...numbers) {
    return sum;
 }
 
-positiveSum
+positiveSum()

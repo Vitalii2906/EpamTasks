@@ -3,4 +3,4 @@ function isBigger(a, b) {
    return c
 }
 
-isBigger
+isBigger()
