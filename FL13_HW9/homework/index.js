@@ -16,58 +16,44 @@ function convert(...arg){
    return arr
 }
 
-function executeforEach(arr, forEach){
-   let numbers = arr
-   let key
-   let value
-   
-   for (key in numbers){
-      if (Object.prototype.hasOwnProperty.call(numbers, key)){
-         value = numbers[key]
-         forEach(value)
-      }
+function executeforEach(arr, func){
+   for(let i = 0; i < arr.length; i++){
+      func(arr[i])
    }
 }
 
-function mapArray(arr, forEach){
-   let mapArr = arr
-   let value
-   for(let key in mapArr){
-      if (Object.prototype.hasOwnProperty.call(mapArr, key)) {
-         value = Number(mapArr[key])
-         if(typeof value === 'string'){
-            value = Number(value)
-         }
-         return forEach(value)
-      }
-   }
+function mapArray(arr, func){
+   let mapArr = []
+   executeforEach(arr, function(el){
+      mapArr.push(func(+el))
+   })
+   return mapArr
 }
 
-function filterArray(arr, forEach){
-   let filterArr = arr 
-   let value
-   for(let key in filterArr){
-      if (Object.prototype.hasOwnProperty.call(filterArr, key)) {
-         value = filterArr[key]
-         forEach(value)
+function filterArray(arr, func){
+   let filterArr = []
+   executeforEach(arr, function(el){
+      let a = func(el)
+      if(a === true){
+         filterArr.push(+el)
       }
-   }
-   let filterArr1 = filterArr.filter(forEach)
-   return filterArr1
+   })
+   return filterArr
 }
 
 function containsValue(arr, item) {
-   let newArr = arr
-   let value
-   for(let key in newArr){
-      if (Object.prototype.hasOwnProperty.call(newArr, key)) {
-         value = newArr[key]
-         if(value === item){
-            return true
-         }else {
-            return false
-         }
+   let check = 0 
+   executeforEach(arr, function(el){
+      if (el === item){
+         check += 1
+      }else{
+         check += 0
       }
+   }) 
+   if(check > 0) {
+      return true
+   }else {
+      return false
    }
 }
 
@@ -93,3 +79,45 @@ function makeListFromRange(arr){
    }
    return rangeArr1
 }
+
+function getArrayOfKeys(arr, key){
+   let newKeysArr = []
+   executeforEach(arr, function(el){
+      newKeysArr.push(el[key])
+   })
+   return newKeysArr
+}
+
+function substitute(arr){
+   let subArr = []
+   let ten = 10
+   let twenty = 20
+   mapArray(arr, function(el){
+      if(el > Number(ten) && el < Number(twenty)){
+         subArr.push('*')
+      }else{
+         subArr.push(el)
+      }
+   })
+   return subArr
+}
+
+function getPastDay(currentDate, days) {
+   let date = new Date(currentDate);
+   let pastDate = new Date(date);
+
+   pastDate.setDate(date.getDate() - days);
+   return pastDate.getDate();
+}
+
+getPastDay();
+
+function formatDate(time){
+   const TEN = 10
+   let min = time.getMinutes() < TEN ? '0' + time.getMinutes() : time.getMinutes()
+   let hour = time.getHours() < TEN ? '0' + time.getHours() : time.getHours()
+
+   return `${time.getFullYear()}/${time.getMonth() + 1}/${time.getDate()}/${hour}:${min}`
+}
+
+formatDate()
