@@ -103,14 +103,14 @@ function substitute(arr){
 }
 
 function getPastDay(currentDate, days) {
-   let date = new Date(currentDate);
-   let pastDate = new Date(date);
+   let date = new Date(currentDate)
+   let pastDate = new Date(date)
 
-   pastDate.setDate(date.getDate() - days);
-   return pastDate.getDate();
+   pastDate.setDate(date.getDate() - days)
+   return pastDate.getDate()
 }
 
-getPastDay();
+getPastDay()
 
 function formatDate(time){
    const TEN = 10
