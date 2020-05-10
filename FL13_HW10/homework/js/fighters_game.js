@@ -1,6 +1,4 @@
 let minus = -1, two = 2, three = 3, four = 4, five = 5, twentyFive = 25, fifty = 50, seventyFive = 75, hundred = 100
-const fighter1 = new Fighter({name:'Maximus', damage: 20, strength: 20, agility: 15, hp: 100})
-const fighter2 = new Fighter({name:'Commodus', damage: 25, strength: 25, agility: 20, hp: 90})
 function Fighter({name, damage, strength, agility, hp, wins, losses}){
    wins = 0
    losses = 0
@@ -133,6 +131,7 @@ function battle(object1, object2){
       object2.addWin()
       console.log(`${name1} has won!`)
    }
+   return deal1, deal2
 }
 
 
