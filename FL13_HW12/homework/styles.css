@@ -1,0 +1,75 @@
+*{
+   margin: 0;
+}
+button,
+h4{
+   cursor: pointer;
+}
+#root{
+   display: flex;
+}
+
+
+.container1{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   background-color: silver;
+}
+.container1 div{
+   padding: 10px;
+}
+.container2{
+   text-align: center;
+   background-color: lightblue;
+   width: 100%;
+}
+.container2 img{
+   margin-top: 20px;
+   width: 10%;
+   height: auto;
+}
+.container2>div{
+   text-align: center;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+.add{
+   width: 100%;
+   height: 30px;
+   background-image: url('https://simpleicon.com/wp-content/uploads/plus.png');
+   background-position: center;
+   background-size: 20%;
+   background-repeat: no-repeat;
+}
+
+.active{
+   display: flex;
+}
+
+
+form{
+   display: none;
+   padding-top: 50px;
+   margin: 0 auto;
+   flex-direction: column;
+   align-items: center;
+}
+form input,
+form button{
+   margin-bottom: 10px;
+}
+
+.preview{
+   display: none;
+}
+.deactive{
+   display: none;
+}
+
+
+#h4click{
+   text-decoration-line: none;
+   color: black;
+}
