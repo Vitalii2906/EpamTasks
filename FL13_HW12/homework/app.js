@@ -19,6 +19,7 @@ buttonAdd.onclick = function(){
    let url = `index.html#add`
    history.pushState(state, title, url)
    form.className = 'active'
+   previewBook.className = 'deactive'
    inputName.value = ''
    inputAuthor.value = ''
    inputPlot.value = ''
