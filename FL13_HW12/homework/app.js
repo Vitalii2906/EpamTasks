@@ -143,12 +143,6 @@ previewBook.append(plotBook)
 
 
 books2.forEach(element => {
-   function clickPre(){
-      let state = `book_id: ${element.newId}`
-      let title = `${element.name}`
-      let url = `index.html?id=${element.newId}#preview`
-      history.pushState(state, title, url)
-   }
    div = document.createElement('div')
    div.classList.add('item')
    let h4 = document.createElement('h4')
@@ -156,7 +150,10 @@ books2.forEach(element => {
    div.append(h4)
    let h4Click = document.createElement('a')
    h4Click.onclick = function(){
-      clickPre()
+      let state = `book_id: ${element.newId}`
+      let title = `${element.name}`
+      let url = `index.html?id=${element.newId}#preview`
+      history.pushState(state, title, url)
    }
    h4Click.innerHTML = element.name
    
@@ -169,12 +166,6 @@ books2.forEach(element => {
    button.innerHTML = 'Edit'
    button.id = `edit`
 
-   button.onclick = function(){
-      let state = `book_id: ${element.newId}`
-      let title = `${element.name}`
-      let url = `index.html?id=${element.newId}#edit`
-      history.pushState(state, title, url)
-   }
    
    save.onclick = function(e){
       e.preventDefault()
@@ -192,7 +183,10 @@ books2.forEach(element => {
       authorBook.innerHTML = element.author
       plotBook.innerHTML = element.plot
       
-      clickPre()
+      let state = `book_id: ${element.newId}`
+      let title = `${element.name}`
+      let url = `index.html?id=${element.newId}#preview`
+      history.pushState(state, title, url)
       books2 = JSON.parse(window.localStorage.getItem('books'))
 
       setTimeout(function(){
@@ -215,6 +209,10 @@ books2.forEach(element => {
       inputAuthor.value = element.author
       inputPlot.value = element.plot
       inputImage.value = element.image
+      let state = `book_id: ${element.newId}`
+      let title = `${element.name}`
+      let url = `index.html?id=${element.newId}#edit`
+      history.pushState(state, title, url)
       
       
    }
