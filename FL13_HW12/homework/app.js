@@ -34,13 +34,17 @@ buttonAdd.onclick = function(){
          author: inputAuthor.value,
          plot: inputPlot.value,
          image: inputImage.value,
-         newId: Math.random() * hundred
+         newId: Math.trunc(Math.random() * hundred)
       }
       books2.push(newBook)
       window.localStorage.setItem('books', JSON.stringify(books2))
       form.className = 'deactive'
+      books2 = JSON.parse(window.localStorage.getItem('books'))
    }
+   
 }
+
+
 
 
 
@@ -53,6 +57,7 @@ root.append(container2)
 let img = document.createElement('img')
 img = new Image(hundred, hundred)
 
+
 let form = document.createElement('form')
 let inputName = document.createElement('input')
 let inputAuthor = document.createElement('input')
@@ -62,6 +67,8 @@ let cancel = document.createElement('button')
 cancel.innerHTML = 'Cancel'
 let save = document.createElement('button')
 save.innerHTML = 'Save'
+save.setAttribute('type', 'submit')
+save.setAttribute('value', 'Submit')
 form.append(inputName)
 form.append(inputAuthor)
 form.append(inputPlot)
@@ -69,6 +76,52 @@ form.append(inputImage)
 form.append(cancel)
 form.append(save)
 container2.append(form)
+if(inputName.value === ''){
+   save.setAttribute('disabled', 'disabled')
+}
+inputName.onfocus = function() {
+   if (inputName.value !== '' && inputAuthor.value !== '' && inputPlot.value !== '' && inputImage.value !== '') {
+      save.removeAttribute('disabled')
+   }else{
+      save.setAttribute('disabled', 'disabled')
+   }
+}
+if(inputAuthor.value === ''){
+   save.setAttribute('disabled', 'disabled')
+}
+inputAuthor.onfocus = function() {
+   if (inputName.value !== '' && inputAuthor.value !== '' && inputPlot.value !== '' && inputImage.value !== '') {
+      save.removeAttribute('disabled')
+   }else{
+      save.setAttribute('disabled', 'disabled')
+   }
+}
+if(inputPlot.value === ''){
+   save.setAttribute('disabled', 'disabled')
+}
+inputPlot.onfocus = function() {
+   if (inputName.value !== '' && inputAuthor.value !== '' && inputPlot.value !== '' && inputImage.value !== '') {
+      save.removeAttribute('disabled')
+   }else{
+      save.setAttribute('disabled', 'disabled')
+   }
+}
+if(inputImage.value === ''){
+   save.setAttribute('disabled', 'disabled')
+}
+inputImage.onfocus = function() {
+   if (inputName.value !== '' && inputAuthor.value !== '' && inputPlot.value !== '' && inputImage.value !== '') {
+      save.removeAttribute('disabled')
+   }else{
+      save.setAttribute('disabled', 'disabled')
+   }
+}
+
+
+
+
+
+
 
 let previewBook = document.createElement('div')
 previewBook.classList.add('preview')
@@ -88,6 +141,10 @@ previewBook.append(plotBook)
 
 
 books2.forEach(element => {
+   
+   if(inputName !== ''){
+      save.className = ''
+   }
    function clickPre(){
       let state = `book_id: ${element.newId}`
       let title = `${element.name}`
@@ -121,31 +178,32 @@ books2.forEach(element => {
       let title = `${element.name}`
       let url = `index.html?id=${element.newId}#edit`
       history.pushState(state, title, url)
-      
    }
    
-   save.onclick = function(e){
-      e.preventDefault()
-
+   save.onclick = function(){
       element.name = inputName.value
       element.author = inputAuthor.value
       element.plot = inputPlot.value
       element.image = inputImage.value
 
       window.localStorage.setItem('books', JSON.stringify(books2))
-
+      
       previewBook.className = 'active'
       form.className = 'deactive'
       previewImage.src = element.image
       nameBook.innerHTML = element.name
       authorBook.innerHTML = element.author
       plotBook.innerHTML = element.plot
-
+      
       clickPre()
       
+      books2 = JSON.parse(window.localStorage.getItem('books'))
+
       setTimeout(function(){
          alert('Book successfully updated')
       }, threeHundred)
+      
+
    }
 
    cancel.onclick = function (){
@@ -172,15 +230,7 @@ books2.forEach(element => {
       authorBook.innerHTML = element.author
       plotBook.innerHTML = element.plot
    }
-   
 
    container1.prepend(div)
    
 })
-
-
-//button add
-
-
-
-

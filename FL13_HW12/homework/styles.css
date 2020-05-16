@@ -11,18 +11,26 @@ h4{
 
 
 .container1{
+   width: 200px;
    display: flex;
    flex-direction: column;
    text-align: center;
-   background-color: silver;
+}
+.container1 button{
+   float: right;
 }
 .container1 div{
    padding: 10px;
 }
+.item{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   text-align: left;
+}
 .container2{
    text-align: center;
-   background-color: lightblue;
-   width: 100%;
+   width: 90%;
 }
 .container2 img{
    margin-top: 20px;
@@ -36,7 +44,8 @@ h4{
    align-items: center;
 }
 .add{
-   width: 100%;
+   margin: 0 auto;
+   width: 60%;
    height: 30px;
    background-image: url('https://simpleicon.com/wp-content/uploads/plus.png');
    background-position: center;
@@ -72,4 +81,17 @@ form button{
 #h4click{
    text-decoration-line: none;
    color: black;
+   float: left;
+}
+#h4click:hover{
+   color: rgba(0, 0, 0, 0.747);
+}
+h2{
+   margin-top: 30px;
+}
+i{
+   margin-top: 10px;
+}
+p{
+   margin-top: 20px;
 }
