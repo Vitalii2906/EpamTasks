@@ -76,6 +76,8 @@ form.append(inputImage)
 form.append(cancel)
 form.append(save)
 container2.append(form)
+
+
 if(inputName.value === ''){
    save.setAttribute('disabled', 'disabled')
 }
@@ -141,10 +143,6 @@ previewBook.append(plotBook)
 
 
 books2.forEach(element => {
-   
-   if(inputName !== ''){
-      save.className = ''
-   }
    function clickPre(){
       let state = `book_id: ${element.newId}`
       let title = `${element.name}`
@@ -160,12 +158,10 @@ books2.forEach(element => {
    h4Click.onclick = function(){
       clickPre()
    }
-   
    h4Click.innerHTML = element.name
    
    h4Click.id = `h4click`
    h4.append(h4Click)
-
    div.id = element.newId
 
 
@@ -180,7 +176,8 @@ books2.forEach(element => {
       history.pushState(state, title, url)
    }
    
-   save.onclick = function(){
+   save.onclick = function(e){
+      e.preventDefault()
       element.name = inputName.value
       element.author = inputAuthor.value
       element.plot = inputPlot.value
@@ -196,7 +193,6 @@ books2.forEach(element => {
       plotBook.innerHTML = element.plot
       
       clickPre()
-      
       books2 = JSON.parse(window.localStorage.getItem('books'))
 
       setTimeout(function(){
