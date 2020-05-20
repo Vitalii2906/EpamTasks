@@ -1,0 +1,14 @@
+
+.navbar-brand{
+   cursor: pointer;
+}
+.header-card a{
+   background-color: orangered;
+}
+header li{
+   cursor: pointer;
+}
+.footer-subscribe button{
+   background-color: orangered;
+}
+
