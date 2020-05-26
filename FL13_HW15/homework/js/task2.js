@@ -1,4 +1,4 @@
-let twoThousand = 2000, oneThousandAndFiveHundred = 1500
+let twoThousand = 2000, oneThousandAndFiveHundred = 1500, thirty = 30
 
 
 function Vehicle(color, engine) {
@@ -20,7 +20,7 @@ function Vehicle(color, engine) {
          'maxSpeed': this.maxSpeed,
          'model': this.model
       }
-	},
+	}
 
 	this.upgradeEngine = function(newEngine, maxSpeed) {
 		if(this.isStopped) {
@@ -29,7 +29,7 @@ function Vehicle(color, engine) {
 		}else{
 			console.log('You can\'t upgrade engine while car is moving!')
 		}
-	},
+	}
 
 	this.drive = function() {
 		if(this.isDriving) {
@@ -46,7 +46,7 @@ function Vehicle(color, engine) {
 				}
          }, twoThousand)
 		}
-	},
+	}
 
 	this.stop = function() {
       this.lastMaxSpeed = this.currSpeed
@@ -131,6 +131,27 @@ function Motorcycle(model, color, engine){
 				console.log(this.stopMessage)
 			}
 		}, oneThousandAndFiveHundred)
-   }
+	}
+	this.drive = function() {
+		if(this.isDriving) {
+			console.log('Already driving')
+		}else{
+			console.log('Let’s drive')
+			this.isStopped = false
+			this.isStopping = false
+			this.isDriving = true
+			this.interval = setInterval(() => {
+            this.currSpeed += 20
+				console.log(this.currSpeed)
+				if(this.currSpeed >= this.maxSpeed && !this.isStopping) {
+					console.log('speed is too high, SLOW DOWN!')
+					if(this.currSpeed >= this.maxSpeed + thirty){
+						console.log('Engine overheating')
+						this.stop()
+					}
+				}
+         }, twoThousand)
+		}
+	}
 }
 Motorcycle.prototype = new Car()
