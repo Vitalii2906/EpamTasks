@@ -1,3 +1,6 @@
+let twoThousand = 2000, oneThousandAndFiveHundred = 1500
+
+
 function Vehicle(color, engine) {
    this.color = color
    this.engine = engine
@@ -42,7 +45,7 @@ function Vehicle(color, engine) {
 				if(this.currSpeed >= this.maxSpeed && !this.isStopping) {
 					console.log('speed is too high, SLOW DOWN!')
 				}
-			}, 2000)
+			}, twoThousand)
 		}
 	},
 
@@ -63,7 +66,7 @@ function Vehicle(color, engine) {
 				this.isStopped = true
 				console.log(this.stopMessage)
 			}
-		}, 1500)
+		}, oneThousandAndFiveHundred)
 	}
 }
 
